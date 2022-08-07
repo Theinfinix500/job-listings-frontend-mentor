@@ -1,3 +1,4 @@
+import { JobsModule } from './jobs/jobs.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, AttributionComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, JobsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
