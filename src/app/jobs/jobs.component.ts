@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs.component.scss'],
 })
 export class JobsComponent implements OnInit {
-  jobs: Job[] = [];
+  jobs: Job[] = [{} as Job, {} as Job];
 
   constructor() {}
 
