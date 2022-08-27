@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AttributionComponent } from './attribution/attribution.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
-  declarations: [AppComponent, AttributionComponent],
+  declarations: [AppComponent, AttributionComponent, LayoutComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, JobsModule],
   providers: [],
   bootstrap: [AppComponent],

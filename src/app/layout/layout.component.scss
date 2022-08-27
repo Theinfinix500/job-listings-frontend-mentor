@@ -1,0 +1,23 @@
+.layout {
+  height: 100vh;
+  background-color: var(--light-grayish-cyan);
+  position: relative;
+  padding-top: var(--bg-header-desktop-height);
+
+  &::before {
+    content: "";
+    background-image: url("../../assets/images/bg-header-desktop.svg");
+    background-color: var(--desaturated-dark-cyan);
+    width: 100%;
+    height: var(--bg-header-desktop-height);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    padding: 6rem 12rem;
+  }
+}
