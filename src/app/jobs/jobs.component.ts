@@ -1,5 +1,5 @@
 import { Job } from './../models/job.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-jobs',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs.component.scss'],
 })
 export class JobsComponent implements OnInit {
-  jobs: Job[] = [{} as Job, {} as Job];
+  @Input() jobs: Job[] = [];
 
   constructor() {}
 

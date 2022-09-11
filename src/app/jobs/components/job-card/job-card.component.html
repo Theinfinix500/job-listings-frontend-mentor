@@ -1,31 +1,32 @@
-<div class="job-card">
+<div class="job-card" [ngClass]="{ featured: job.featured }">
   <div class="card-content">
     <div class="img">
-      <img src="assets/images/photosnap.svg" alt="" />
+      <img [src]="job.logo" alt="" />
     </div>
     <div class="details">
       <div class="company-name">
-        Photosnap
+        {{ job.company }}
         <div class="flags">
-          <span class="flag">NEW!</span>
-          <span class="flag">FEATURED</span>
+          <span class="flag new" *ngIf="job.new">NEW!</span>
+          <span class="flag" *ngIf="job.featured">FEATURED</span>
         </div>
       </div>
-      <div class="role">Senior Front End Developer</div>
+      <div class="role">{{ job.position }}</div>
       <div class="infos">
-        <span>1d ago</span>
+        <span>{{ job.postedAt }}</span>
         <span class="seperator">⸱</span>
-        <span>Full Time</span>
+        <span>{{ job.contract }}</span>
         <span class="seperator">⸱</span>
-        <span>USA only</span>
+        <span>{{ job.location }}</span>
       </div>
     </div>
     <div class="tags">
-      <span class="tag">Frontend</span>
-      <span class="tag">Senior</span>
-      <span class="tag">HTML</span>
-      <span class="tag">CSS</span>
-      <span class="tag">JavaScript</span>
+      <span class="tag">{{ job.role }}</span>
+      <span class="tag">{{ job.level }}</span>
+      <span class="tag" *ngFor="let language of job.languages">{{
+        language
+      }}</span>
+      <span class="tag" *ngFor="let tool of job.tools">{{ tool }}</span>
     </div>
   </div>
 </div>

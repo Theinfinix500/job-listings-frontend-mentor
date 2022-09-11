@@ -1,5 +1,6 @@
 import { JobsService } from './services/jobs.service';
 import { Component, OnInit } from '@angular/core';
+import { Job } from './models/job.model';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'job-listings-frontend-mentor';
+  jobs: Job[] = [];
+
   constructor(private _jobsService: JobsService) {}
 
   ngOnInit(): void {
-    this._jobsService.getJobs().subscribe();
+    this._jobsService.getJobs().subscribe((jobs) => (this.jobs = jobs));
   }
 }
